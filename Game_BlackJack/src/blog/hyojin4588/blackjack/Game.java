@@ -4,8 +4,12 @@ public class Game {
 
 	public static void main(String[] args) {
 		Deck setDeck = new Deck();
-		System.out.println(setDeck);
-		Card c = setDeck.getCard();
+		
+		Gamer gamer = new Gamer();
+		
+		gamer.receiveCard(setDeck.getCard());
+		gamer.receiveCard(setDeck.getCard());
+		gamer.openCard();
 	}
 
 }

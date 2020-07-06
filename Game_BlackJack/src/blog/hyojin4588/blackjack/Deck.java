@@ -25,9 +25,9 @@ public class Deck {
 			for (int j = 1; j <= 13; j++) {
 				String pattern = Card.PATTERNS[i];
 				String deno = getDeno(j);
-				Card cTemp = new Card(pattern, deno, j > 10 ? 10 : j);
+				Card cTemp = new Card(pattern, deno, getPoint(j));
 				arr.add(cTemp);
-				// arr.add(new Card(Card.PATTERNS[i], getDeno(j)));
+				// arr.add(new Card(Card.PATTERNS[i], getDeno(j), setPoint(j)));
 			}
 		}
 	}
@@ -36,6 +36,10 @@ public class Deck {
 		Collections.shuffle(arr);
 	}
 	*/
+	private int getPoint(int i) {
+		return i > 10 ? 10 : i;		
+	}
+	
 	private String getDeno(int i) {
 		switch(i) {
 		case 1: return "A";

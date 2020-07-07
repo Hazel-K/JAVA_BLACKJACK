@@ -1,12 +1,13 @@
 package blog.hyojin4588.blackjack;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Deck {
 	
 	// 멤버 필드
-	private List<Card> arr = new ArrayList<Card>();
+	private List<Card> arr = new LinkedList<Card>();
 	// 멤버 필드
 
 	// 생성자
@@ -31,11 +32,11 @@ public class Deck {
 			}
 		}
 	}
-	/*
+	
 	private void shuffle() {
 		Collections.shuffle(arr);
 	}
-	*/
+	
 	private int getPoint(int i) {
 		return i > 10 ? 10 : i;		
 	}

@@ -1,11 +1,11 @@
 package blog.hyojin4588.blackjack;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Gamer {
 
-	private List<Card> playerArr = new ArrayList<Card>();
+	protected List<Card> playerArr = new LinkedList<Card>();
 
 	public void receiveCard(Card i) {
 		playerArr.add(i);
@@ -16,10 +16,10 @@ public class Gamer {
 		for (Card card : playerArr) {
 			temp1 += card + "\n";
 		}
-		System.out.printf("%3sTotal : %2d", temp1, sumPoint());
+		System.out.printf("%3s계: %2d\n", temp1, sumPoint());
 	}
 
-	private int sumPoint() {
+	protected int sumPoint() {
 		int iSum = 0;
 		for (Card card : playerArr) {
 			iSum += card.getPoint();

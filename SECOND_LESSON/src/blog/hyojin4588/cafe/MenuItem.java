@@ -17,5 +17,10 @@ public class MenuItem {
 	public int getPrice() {
 		return this.price;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%-27s\t%,1d원", menu, price);
+	}
 
 }

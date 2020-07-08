@@ -2,6 +2,7 @@ package blog.hyojin4588.blackjack;
 
 public class Dealer extends Gamer {
 
+	@Override
 	public void moreCards(Deck i) {
 		int stopPoint = 17;
 		while (true) {

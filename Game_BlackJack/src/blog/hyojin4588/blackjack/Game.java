@@ -26,7 +26,7 @@ public class Game {
 			gamer.receiveCard(setDeck.getCard());
 
 			System.out.println("::::::::::::딜러의 카드:::::::::::::");
-			dealer.showDealerCard();
+			dealer.showDealerCard();	
 
 			System.out.println("\n:::::::::::::나의 카드:::::::::::::");
 			gamer.openCard();

@@ -2,6 +2,7 @@ package blog.hyojin4588.blackjack;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Gamer {
 
@@ -30,6 +31,19 @@ public class Gamer {
 	@Override
 	public String toString() {
 		return playerArr.toString();
+	}
+
+	public void moreCards(Deck i) {
+		Scanner scan = new Scanner(System.in);
+		while (true) {
+			System.out.println("카드를 받으시겠습니까?");
+			String temp = scan.next();
+			if (!"ㄱ".equals(temp)) {
+				break;
+			}
+			receiveCard(i.getCard());
+		}
+		scan.close();
 	}
 
 }

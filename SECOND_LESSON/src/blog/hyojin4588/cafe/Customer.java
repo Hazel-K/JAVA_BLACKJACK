@@ -18,7 +18,7 @@ public class Customer {
 			if (iTemp == 0) {
 				break;
 			} else if (iTemp < 0 || iTemp > 4) {
-				System.out.println("잘못 입력하셨습니다. 번호를 다시 입력하세요.");
+				System.out.println("잘못 입력하셨습니다. 번호를 다시 입력하세요." );
 				continue;
 			}
 		}

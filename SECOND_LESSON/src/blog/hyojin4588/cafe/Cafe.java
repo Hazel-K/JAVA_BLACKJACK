@@ -3,15 +3,12 @@ package blog.hyojin4588.cafe;
 public class Cafe {
 	
 	public static void main(String[] args) {
-		
 		Menu menu = new Menu();
-		// menu.showMenus();
-		System.out.println();
-		System.out.println();
+		Customer buyer = new Customer();
+		Barista barista = new Barista();
 		
-		// MenuSelect sel = new MenuSelect();
-		Customer son1 = new Customer();
-		son1.order(menu);
+		MenuItem choiceMenu = buyer.order(menu);
+		Coffee coffee = barista.makeCoffee(choiceMenu);
 	}
 
 }

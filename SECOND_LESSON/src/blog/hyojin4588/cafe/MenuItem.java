@@ -2,16 +2,16 @@ package blog.hyojin4588.cafe;
 
 public class MenuItem {
 	
-	private String menu;
+	private String name;
 	private int price;
 	
-	public MenuItem(String menu, int price) {
-		this.menu = menu;
+	public MenuItem(String name, int price) {
+		this.name = name;
 		this.price = price;
 	}
 	
-	public String getMenu() {
-		return this.menu;
+	public String getName() {
+		return this.name;
 	}
 	
 	public int getPrice() {
@@ -20,7 +20,7 @@ public class MenuItem {
 	
 	@Override
 	public String toString() {
-		return String.format("%-27s\t%,1d원", menu, price);
+		return String.format("%-27s\t%,1d원", name, price);
 	}
 
 }

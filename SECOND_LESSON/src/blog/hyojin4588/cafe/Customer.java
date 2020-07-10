@@ -10,20 +10,20 @@ public class Customer {
 //	}
 
 	public MenuItem order(Menu i) {
-		System.out.println("메뉴를 번호로 선택해주세요.(0번 종료)");
+		i.showMenus();
+		System.out.println("메뉴를 번호로 선택해주세요.");
 		Scanner scan = new Scanner(System.in);
 		int iTemp = 0;
 		while (true) {
 			iTemp = orderMenu(scan);
-			if (iTemp == 0) {
-				break;
-			} else if (iTemp < 0 || iTemp > 4) {
+			if (iTemp <= 0 || iTemp > 4) {
 				System.out.println("잘못 입력하셨습니다. 번호를 다시 입력하세요." );
 				continue;
+			} else {
+				scan.close();
+				return i.choose(iTemp - 1);
 			}
 		}
-		scan.close();
-		return i.choose(iTemp - 1);
 	}
 	
 	private int orderMenu(Scanner i) {
@@ -34,6 +34,10 @@ public class Customer {
 			System.out.println("잘못 입력하셨습니다. 번호를 다시 입력해주세요.");
 			return orderMenu(i);
 		}
+	}
+	
+	public void drinkCoffee(Coffee i) {
+		System.out.printf("%s을/를 마셨다!", i.getName());
 	}
 	
 //	private void showBill() {

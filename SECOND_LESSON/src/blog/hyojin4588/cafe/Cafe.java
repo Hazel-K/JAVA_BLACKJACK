@@ -9,6 +9,7 @@ public class Cafe {
 		
 		MenuItem choiceMenu = buyer.order(menu);
 		Coffee coffee = barista.makeCoffee(choiceMenu);
+		buyer.drinkCoffee(coffee);
 	}
 
 }
